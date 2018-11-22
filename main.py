@@ -14,8 +14,8 @@ print(determinant2,'\n')
 
 print('ON RECUPERE LE DETERMINANT 3')
 determinant3=det3(mat)
-#print(determinant3,'\n')
+print(determinant3,'\n')
 
 print('MATRICE REDUITE')
-reduite=reduit(mat)
+#reduite=reduit(mat)
 #print(reduite, '\n')
