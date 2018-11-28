@@ -18,3 +18,19 @@ def reduit(mat, ligne, colonne):
 
 def det3(arg):
     return arg[0][0] * det2(reduit(arg,0,0)) - arg[0][1] * det2(reduit(arg,0,1)) + arg[0][2] * det2(reduit(arg,0,2))
+
+def comatrice(m):
+    res=[[0,0,0],[0,0,0],[0,0,0]]
+    for l in range(3):
+        for c in range(3):
+            res[l][c]=(-1)**(l+c) * det2(reduit(m,l,c))
+    return res
+
+def transpose(m):
+    res=[ [0,0,0],
+          [0,0,0],
+          [0,0,0] ]
+    for l in range(3):
+        for c in range(3):
+            res[l][c]=m[c][l]
+    return res
